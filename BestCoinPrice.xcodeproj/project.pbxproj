@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		883071A12A5009B800229D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071A02A5009B800229D8D /* AppDelegate.swift */; };
 		883071A32A5009B800229D8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071A22A5009B800229D8D /* SceneDelegate.swift */; };
-		883071A52A5009B800229D8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071A42A5009B800229D8D /* ViewController.swift */; };
+		883071A52A5009B800229D8D /* CoinDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071A42A5009B800229D8D /* CoinDetailsViewController.swift */; };
 		883071A82A5009B800229D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883071A62A5009B800229D8D /* Main.storyboard */; };
 		883071AA2A5009B800229D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 883071A92A5009B800229D8D /* Assets.xcassets */; };
 		883071AD2A5009B800229D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883071AB2A5009B800229D8D /* LaunchScreen.storyboard */; };
+		883071B52A500A1800229D8D /* CoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071B42A500A1800229D8D /* CoinListViewController.swift */; };
+		883071B72A500A3300229D8D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071B62A500A3300229D8D /* Coin.swift */; };
+		883071B92A500A4400229D8D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071B82A500A4400229D8D /* NetworkManager.swift */; };
+		883071C22A5031E400229D8D /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883071C12A5031E400229D8D /* CoinTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8830719D2A5009B800229D8D /* BestCoinPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestCoinPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		883071A02A5009B800229D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		883071A22A5009B800229D8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		883071A42A5009B800229D8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		883071A42A5009B800229D8D /* CoinDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsViewController.swift; sourceTree = "<group>"; };
 		883071A72A5009B800229D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		883071A92A5009B800229D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		883071AC2A5009B800229D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		883071AE2A5009B800229D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883071B42A500A1800229D8D /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
+		883071B62A500A3300229D8D /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		883071B82A500A4400229D8D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		883071C12A5031E400229D8D /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		8830719F2A5009B800229D8D /* BestCoinPrice */ = {
 			isa = PBXGroup;
 			children = (
-				883071A02A5009B800229D8D /* AppDelegate.swift */,
-				883071A22A5009B800229D8D /* SceneDelegate.swift */,
-				883071A42A5009B800229D8D /* ViewController.swift */,
-				883071A62A5009B800229D8D /* Main.storyboard */,
+				883071C02A5031B200229D8D /* Views */,
+				883071BF2A5012B700229D8D /* ViewControllers */,
+				883071BD2A50125800229D8D /* Storyboards */,
+				883071BB2A50124000229D8D /* Models */,
+				883071BC2A50124B00229D8D /* Servises */,
 				883071A92A5009B800229D8D /* Assets.xcassets */,
-				883071AB2A5009B800229D8D /* LaunchScreen.storyboard */,
-				883071AE2A5009B800229D8D /* Info.plist */,
+				883071BE2A5012A600229D8D /* App */,
 			);
 			path = BestCoinPrice;
+			sourceTree = "<group>";
+		};
+		883071BB2A50124000229D8D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				883071B62A500A3300229D8D /* Coin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		883071BC2A50124B00229D8D /* Servises */ = {
+			isa = PBXGroup;
+			children = (
+				883071B82A500A4400229D8D /* NetworkManager.swift */,
+			);
+			path = Servises;
+			sourceTree = "<group>";
+		};
+		883071BD2A50125800229D8D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				883071A62A5009B800229D8D /* Main.storyboard */,
+				883071AB2A5009B800229D8D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		883071BE2A5012A600229D8D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				883071A02A5009B800229D8D /* AppDelegate.swift */,
+				883071A22A5009B800229D8D /* SceneDelegate.swift */,
+				883071AE2A5009B800229D8D /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		883071BF2A5012B700229D8D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				883071A42A5009B800229D8D /* CoinDetailsViewController.swift */,
+				883071B42A500A1800229D8D /* CoinListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		883071C02A5031B200229D8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				883071C12A5031E400229D8D /* CoinTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883071A52A5009B800229D8D /* ViewController.swift in Sources */,
+				883071B92A500A4400229D8D /* NetworkManager.swift in Sources */,
+				883071A52A5009B800229D8D /* CoinDetailsViewController.swift in Sources */,
 				883071A12A5009B800229D8D /* AppDelegate.swift in Sources */,
 				883071A32A5009B800229D8D /* SceneDelegate.swift in Sources */,
+				883071B72A500A3300229D8D /* Coin.swift in Sources */,
+				883071B52A500A1800229D8D /* CoinListViewController.swift in Sources */,
+				883071C22A5031E400229D8D /* CoinTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +353,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4NPPTUJ49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestCoinPrice/Info.plist;
+				INFOPLIST_FILE = BestCoinPrice/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +366,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = latushkin.as.BestCoinPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +384,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = K4NPPTUJ49;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BestCoinPrice/Info.plist;
+				INFOPLIST_FILE = BestCoinPrice/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +397,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = latushkin.as.BestCoinPrice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
