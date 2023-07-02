@@ -10,11 +10,11 @@ import UIKit
 final class CoinListTableViewController: UITableViewController {
     
     private var coins: [Coin] = []
-    private let networkManager = NetworkManager.shares
+    private let networkManager = NetworkManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Coin List"
+        title = "Best Coin Price"
         fetchCharacter()
     }    
     
@@ -45,10 +45,10 @@ final class CoinListTableViewController: UITableViewController {
 extension CoinListTableViewController {
     
     private func fetchCharacter() {
-        networkManager.fetchCharacter(from: Link.coinListLink.url) { result in
+        networkManager.fetchCoin(from: Link.coinListLink.url) { result in
             switch result {
-            case .success(let coin):
-                self.coins = coin.data
+            case .success(let coins):
+                self.coins = coins
                 self.tableView.reloadData()
             case .failure(let error):
                 print(error)

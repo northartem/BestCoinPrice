@@ -15,9 +15,9 @@ final class CoinDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = coin.id
+        title = coin.name
         nameLabel.text = "Название: \(coin.name)"
-        priceLabel.text = "Цена: \(coin.priceUsd)"
+        priceLabel.text = "Цена: \(coin.currentPrice)"
     }
 }
 
